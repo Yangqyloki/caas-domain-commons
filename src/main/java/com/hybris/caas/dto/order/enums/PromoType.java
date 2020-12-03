@@ -1,0 +1,7 @@
+package com.hybris.caas.dto.order.enums;
+
+public enum PromoType {
+                       //todo ORDER_PURCHASE_AMOUNT should be deleted after sprint 82
+                       CONTINUITY, TACTIC, SHIPPING_FEE, PRODUCT_ABSOLUTE_DISCOUNT, PRODUCT_PERCENTAGE_DISCOUNT, PRODUCT_PRICE_OVERRIDE, ORDER_SUBTOTAL_PERCENTAGE_DISCOUNT, ORDER_SUBTOTAL_ABSOLUTE_DISCOUNT, ORDER_PURCHASE_AMOUNT
+
+}

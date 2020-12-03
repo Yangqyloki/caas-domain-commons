@@ -1,0 +1,47 @@
+.gradle/
+gradle/wrapper/dists
+gradle/wrapper
+build/
+out/
+!gradle/wrapper/gradle-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea/
+classes/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Eclipse ###
+bin/
+
+### Class Folder ###
+classes/
+
+### QueryDSL ###
+/src/main/generated/
+IndexCaas.xls
+IndexStage.xls
+query_analysis.md
+
+### ignore local docker image
+docker-compose.yml
+
+### avoid local Order, OrderLine schema
+*.class.json

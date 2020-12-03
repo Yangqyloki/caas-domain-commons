@@ -1,0 +1,26 @@
+ext {
+    artifactory_username = project.findProperty('artifactory_username') ?: System.env.artifactory_username
+    artifactory_password = project.findProperty('artifactory_password') ?: System.env.artifactory_password
+    releases_repo = "https://common.repositories.sap.ondemand.com/artifactory/upscale-releases"
+    snapshots_repo = "https://common.repositories.sap.ondemand.com/artifactory/upscale-snapshots"
+}
+
+repositories.ext.nexusCenter = {
+    repositories.maven {
+        url "http://nexus.wdf.sap.corp:8081/nexus/content/groups/build.milestones"
+    }
+
+    repositories.maven {
+        url = releases_repo
+        credentials {
+            username = artifactory_username
+            password = artifactory_password
+        }
+    }
+}
+
+project.buildscript.repositories.ext.nexusCenter = {
+    project.buildscript.repositories.maven {
+        url "http://nexus.wdf.sap.corp:8081/nexus/content/groups/build.milestones"
+    }
+}
